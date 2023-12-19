@@ -7,9 +7,18 @@ Created on Fri Dec 15 09:58:19 2023
 
 # stock.py
 # Exercise 4.1
+from typedproperty import typedproperty
 
 class Stock:
-    __slots__ = ('name','_shares','price')
+    String = lambda name: typedproperty(name, str)
+    Integer = lambda name: typedproperty(name, int)
+    Float = lambda name: typedproperty(name, float)
+   
+    name = String('name')
+    shares = Integer('shares')
+    price = Float('price')
+    
+   
     def __init__(self, name, shares, price):
         self.name = name
         self.shares = shares
@@ -25,16 +34,7 @@ class Stock:
         
     def sell(self, nshares):
         self.shares -= nshares
-    
-    @property
-    def shares(self):
-        return self._shares
-
-    @shares.setter
-    def shares(self, value):
-        if not isinstance(value, int):
-            raise TypeError('Expected int')
-        self._shares = value     
+     
         
 class MyStock(Stock):
     def __init__(self, name, shares, price, factor):
