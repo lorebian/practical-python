@@ -81,7 +81,10 @@ if __name__ == '__main__':
     main(sys.argv)
 
 
-
+# import report
+# portfolio = list(report.read_portfolio('Data/portfolio.csv'))
+# for s in portfolio:
+#     print(s)
 
 
 
