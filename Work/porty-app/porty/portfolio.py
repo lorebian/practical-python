@@ -6,8 +6,8 @@ Created on Mon Dec 18 11:26:43 2023
 """
 
 # portfolio.py
-import fileparse
-import stock
+from . import fileparse
+from . import stock
 
 class Portfolio:
     def __init__(self):

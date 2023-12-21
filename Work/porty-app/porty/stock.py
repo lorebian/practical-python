@@ -7,7 +7,7 @@ Created on Fri Dec 15 09:58:19 2023
 
 # stock.py
 # Exercise 4.1
-from typedproperty import typedproperty
+from .typedproperty import typedproperty
 
 class Stock:
     String = lambda name: typedproperty(name, str)

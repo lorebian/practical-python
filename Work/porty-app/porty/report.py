@@ -4,10 +4,10 @@
 
 # report.py
 
-import fileparse
-from stock import Stock
-from portfolio import Portfolio
-import tableformat
+from . import fileparse
+from .stock import Stock
+from .portfolio import Portfolio
+from . import tableformat
 
 # This file sets up basic configuration of the logging module.
 # Change settings here to adjust logging output as needed.
